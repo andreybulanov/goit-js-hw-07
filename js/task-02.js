@@ -6,13 +6,18 @@ const ingredients = [
   'Зелень',
   'Приправы',
 ];
-const navEl = document.querySelector('#ingredients');
- 
-ingredients.forEach((ingredient) => {
-  const navItemEl = document.createElement('li');
-  navItemEl.textContent = ingredient;
-  navEl.appendChild(navItemEl);
-  return navItemEl;
-});
-console.log(navEl);
 
+const navEl = document.querySelector('#ingredients');
+
+const addItems = ingredients =>
+  ingredients.map((ingredient) => {
+    const navItemEl = document.createElement('li');
+    navItemEl.textContent = ingredient;
+    return navItemEl;
+  });
+
+const listEl = addItems(ingredients);
+
+navEl.append(...listEl);
+
+console.log(navEl);
