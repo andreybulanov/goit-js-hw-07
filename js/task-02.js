@@ -21,3 +21,4 @@ const listEl = addItems(ingredients);
 navEl.append(...listEl);
 
 console.log(navEl);
+
