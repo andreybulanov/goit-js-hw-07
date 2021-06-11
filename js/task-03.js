@@ -24,6 +24,6 @@ const imageEl = images.map(addImage).join('');
 
 listEl.insertAdjacentHTML("beforeend", imageEl);
 
-listEl.style.display = "block";
+listEl.style.display = "flex";
 
 console.log(listEl);
